@@ -1,0 +1,20 @@
+package lab_csw;
+class A4{
+	private String name;
+	public A4(String name) {
+		this.name= name;
+		System.out.println("Object Created: "+name);
+	}
+	protected void finalise()throws Throwable{
+		System.out.println("Garbage Collected: "+name);
+	}
+}
+public class A4Q4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+new A4("AnonymousObject");
+System.gc();
+	}
+
+}
