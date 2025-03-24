@@ -1,0 +1,15 @@
+package lab_csw;
+import java.util.*;
+public class ExampleOfImmutablity {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String str= "Java";
+str.concat("Programming");
+System.out.println(str);
+
+str=str.concat("Programming");
+System.out.println(str);
+	}
+
+}
