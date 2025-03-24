@@ -1,0 +1,42 @@
+package lab_csw;
+import java.util.ArrayList;
+import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+class A6{
+	private int[]data;
+	public A6(int size) {
+		this.data= new int[size];
+	}
+}
+
+public class A4Q6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Runtime runtime= Runtime.getRuntime();
+List<A6>objectList= new ArrayList<>();
+SimpleDateFormat sdf= new SimpleDateFormat("HH:MM:SS");
+printMemoryUsage(runtime, sdf,"Start");
+for(int i=0; i<100000; i++) {
+	objectList.add(new A6(1000));
+	if(1%10000==0) {
+		printMemoryUsage(runtime,sdf,"After creating"+i+"objects");
+	}
+}
+objectList.clear();
+System.gc();
+printMemoryUsage(runtime,sdf,"After Garbage Collection");
+System.out.println("End of Program.");
+	}
+	private static void printMemoryUsage(Runtime runtime, SimpleDateFormat sdf, String label) {
+		String timeStamp= sdf.format(new Date());
+		long totalMemory= runtime.totalMemory()/1024/1024;
+		long freeMemory= runtime.freeMemory()/1024/1024;
+		long usedMemory= totalMemory- freeMemory;
+		System.out.printf("[%s]%s- Total Heap:%d MB|Free Heap:%d MB|Used Heap:%d MB%n",
+				timeStamp,label,totalMemory, freeMemory, usedMemory);		
+		
+	}
+
+}
