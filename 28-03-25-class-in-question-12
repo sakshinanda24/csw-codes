@@ -1,0 +1,26 @@
+package lab_csw;
+import java.io.*;
+class PersonL implements Serializable{
+	public static String ser;
+	String name;
+	public PersonL(String name) {this.name= name;}
+	
+		
+	}
+
+
+public class Serializable {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+ObjectOutputStream out= new ObjectOutputStream(new FileOutputStream(PersonL.ser));
+out.writeObject(new PersonL("Ramya"));
+out.close();
+
+ObjectInputStream in= new ObjectInputStream(new FileInputStream(PersonL.ser));
+PersonL p= (PersonL)in.readObject();
+in.close();
+System.out.println("Loaded:"+p.name);
+	}
+
+}
