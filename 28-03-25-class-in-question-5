@@ -1,16 +1,16 @@
 package lab_csw;
 
-public class ImmutabilityStringMemory {
+public class StringModifyExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String s1= "Hello";
-		System.out.println("s1: "+s1+ " Address: "+System.identityHashCode(s1));
-		String s2= s1.concat("World");
-		s1=s1.concat("World");
-		System.out.println("After concat:");
-		System.out.println("s1: "+s1+ "Address:"+System.identityHashCode(s1));
-	    System.out.println(s2);
+		System.out.println(System.identityHashCode(s1));
+		s1= "World";
+		System.out.println(System.identityHashCode(s1));
+		System.out.println(s1);
+		
 	}
 
 }
+//"Hello" says in the string pool, but s1 now points to "world".
