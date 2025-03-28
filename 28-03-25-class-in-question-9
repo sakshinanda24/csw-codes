@@ -1,0 +1,20 @@
+package lab_csw;
+class PersonZ implements Comparable<PersonZ>{
+	String name;
+	public PersonZ(String name) {this.name= name;}
+public int compareTo(PersonZ other) {
+	return this.name.compareTo(other.name);
+}
+	
+}
+public class Comparable_3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+PersonZ p1= new PersonZ("Amit");
+PersonZ p2= new PersonZ("Rina");
+
+System.out.println(p1.compareTo(p2));
+	}
+
+}
