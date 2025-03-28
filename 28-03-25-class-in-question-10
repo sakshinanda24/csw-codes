@@ -1,0 +1,16 @@
+package lab_csw;
+
+public class CharSequence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+CharSequence cs= "Hello";
+
+System.out.println("Character at index 1: " +cs.charAt(1));
+System.out.println("Length of String: " +cs.length());
+System.out.println("Subsequence (1,4: " +cs.subSequence(1,4));
+System.out.println("Original String: " +cs.toString());
+
+	}
+
+}
