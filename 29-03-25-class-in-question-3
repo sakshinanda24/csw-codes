@@ -1,0 +1,17 @@
+package lab_csw;
+
+public class StringBufferComparisonIssue {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Why don't StringBuffer and StringBuilder Implement Comparable?
+StringBuffer sb1= new StringBuffer("Apple");
+StringBuffer sb2= new StringBuffer("Banana");
+int result= sb1.toString().compareTo(sb2.toString());
+System.out.println("Comparison result before modification: " +result);
+sb1.append("Fruit");
+System.out.println("Modified sb1: " +sb1);
+System.out.println("Comparison result still says: " +result);
+	}
+
+}
