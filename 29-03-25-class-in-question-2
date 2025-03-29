@@ -1,0 +1,23 @@
+package lab_csw;
+
+public class StringBufferComparison {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//compareTo Implementation in StringBuffer and StringBuilder
+StringBuffer sb1= new StringBuffer("Java");
+StringBuffer sb2= new StringBuffer("Python");
+int result= sb1.toString().compareTo(sb2.toString());
+if(result<0) {
+	System.out.println("sb1 is smaller than sb2.");
+	
+}else if(result>0) {
+	System.out.println("sb1 is greater than sb2.");
+}else {
+	System.out.println("sb1 and sb2 are eqaul.");
+}
+
+
+	}
+
+}
