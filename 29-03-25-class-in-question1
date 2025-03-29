@@ -27,8 +27,20 @@ public class Demo4 {
  String str3= "Hello";
  char[]chars= str3.toCharArray();
  System.out.println(chars[1]); //Convert String to Character Array.
+
  
+ //StringBuilder
+ StringBuilder sb= new StringBuilder("Java");
+ sb.append("Programming");
+ System.out.println(sb); //output:Java Programming
+
  
 	}
 
 }
+
+ 
+ 
+	
+
+
