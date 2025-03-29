@@ -1,0 +1,15 @@
+package lab_csw;
+
+public class AppendableExample {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+//Appendable
+		Appendable sb= new StringBuilder("Hello");
+		sb.append(",Java!");
+		sb.append('!');
+		System.out.println(sb); //output: Hello, Java!!
+		
+	}
+
+}
