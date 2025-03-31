@@ -1,0 +1,38 @@
+Current text: Hello,Java!
+Length: 11,Capacity: 27
+Choose an operation: 
+1.Append Text
+2.Insert Text
+3.Delete Text
+4.Reverse Text
+5.Replace Text
+6.Exit
+Enter choice: 
+4
+Current text: !avaJ,olleH
+Length: 11,Capacity: 27
+Choose an operation: 
+1.Append Text
+2.Insert Text
+3.Delete Text
+4.Reverse Text
+5.Replace Text
+6.Exit
+Enter choice: 
+5
+Enter start index to replace:
+2
+Enter end index to replace:
+3
+Enter replacement text:
+1
+Current text: !a1aJ,olleH
+Length: 11,Capacity: 27
+Choose an operation: 
+1.Append Text
+2.Insert Text
+3.Delete Text
+4.Reverse Text
+5.Replace Text
+6.Exit
+Enter choice: 
