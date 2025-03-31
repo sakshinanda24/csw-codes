@@ -1,0 +1,22 @@
+package lab_csw;
+
+public class A5Q2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String str= "Hello";
+System.out.println("Original String:" +str);
+System.out.println("Memory Address:" +System.identityHashCode(str));
+str= str.concat("World");
+System.out.println("After Concatenation:" +str);
+System.out.println("New Memory Address:" +System.identityHashCode(str));
+String charSeq= "Immutable";
+System.out.println("Using String as CharSequence:");
+System.out.println("Character at index 2:" +charSeq.charAt(2));
+System.out.println("Length of CharSequence:" +charSeq.length());
+System.out.println("Subsequence(2,6):" +charSeq.subSequence(2,6));
+System.out.println("Original CharSequence:" +charSeq);
+
+	}
+
+}
