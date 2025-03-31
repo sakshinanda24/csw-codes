@@ -1,0 +1,32 @@
+package lab_csw;
+import java.util.*;
+public class A5Q6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc= new Scanner(System.in);
+System.out.println("Enter a String: ");
+String input= sc.nextLine();
+char[]charArray= input.toCharArray();
+System.out.println("Character array:");
+for(char c: charArray) {
+	System.out.print(c+" ");
+	
+}
+System.out.println();
+System.out.print("Enter a character to search: ");
+char searchChar= sc.next().charAt(0);
+int firstIndex= input.indexOf(searchChar);
+int lastIndex= input.lastIndexOf(searchChar);
+if(firstIndex!=-1) {
+	System.out.println("First occurrence at index: " +firstIndex);
+	System.out.println("Last occurrence at index: " +lastIndex);
+	
+}else {
+	System.out.println("Character not found in the String.");
+}
+
+sc.close();
+	}
+
+}
