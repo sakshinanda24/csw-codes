@@ -1,0 +1,27 @@
+package lab_csw;
+import java.util.*;
+public class A5Q5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc= new Scanner(System.in);
+System.out.println("Enter first String: ");
+String str1= sc.nextLine();
+System.out.println("Enter second String: ");
+String str2= sc.nextLine();
+String lower1= str1.toLowerCase();
+String lower2= str1.toLowerCase();
+String upper1= str1.toUpperCase();
+String upper2= str1.toUpperCase();
+boolean isEqual= lower1.equals(lower2) ;
+System.out.println("Converted Strings: ");
+System.out.println("Lowercase: " +lower1+ "|" +lower2);
+System.out.println("Uppercase: " +upper1+ "|" +upper2);
+System.out.println("Case-insensitive equality: " +(isEqual? "Equal" : "Not Equal"));
+sc.close();
+
+
+
+	}
+
+}
