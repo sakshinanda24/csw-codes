@@ -1,0 +1,7 @@
+Enter a String: 
+helloo
+Character array:
+h e l l o o 
+Enter a character to search: e
+First occurrence at index: 1
+Last occurrence at index: 1
