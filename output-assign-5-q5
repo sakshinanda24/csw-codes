@@ -1,0 +1,8 @@
+Enter first String: 
+hii
+Enter second String: 
+heyy
+Converted Strings: 
+Lowercase: hii|hii
+Uppercase: HII|HII
+Case-insensitive equality: Equal
