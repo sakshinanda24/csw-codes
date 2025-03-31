@@ -1,0 +1,87 @@
+package lab_csw;
+import java.util.*;
+public class A5Q3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc= new Scanner(System.in);
+StringBuffer text= new StringBuffer("Hello,Java!");
+while(true) {
+	System.out.println("Current text: " +text);
+	System.out.println("Length: " +text.length()+ ",Capacity: " +text.capacity());
+	System.out.println("Choose an operation: ");
+	System.out.println("1.Append Text");
+	System.out.println("2.Insert Text");
+	System.out.println("3.Delete Text");
+	System.out.println("4.Reverse Text");
+	System.out.println("5.Replace Text");
+	System.out.println("6.Exit");
+	System.out.println("Enter choice: ");
+	int choice= sc.nextInt();
+	sc.nextLine();
+	switch(choice) {
+	case 1: //append
+    System.out.println("Enter text to append:");
+    String appendText= sc.nextLine();
+    text.append(appendText);
+    break;
+	case 2://insert
+		System.out.println("Enter index to insert at:");
+		int insertIndex= sc.nextInt();
+		sc.nextLine();
+		System.out.println("Enter text to insert:");
+		String insertText= sc.nextLine();
+		if(insertIndex>=0 && insertIndex<=text.length()) {
+			text.insert(insertIndex, insertText);
+			
+		}else {
+			System.out.println("Invalid index!");
+		}
+		break;
+	case 3: //delete
+		System.out.println("Enter start index to delete:");
+		int start= sc.nextInt();
+		System.out.println("Enter end index to delete:");
+		int end= sc.nextInt();
+		if(start>=0 && end <=text.length() && start<end) {
+			
+		}else {
+			System.out.println("Invalid indices!");
+		}
+		break;
+	case 4://reverse
+		text.reverse();
+		break;
+	case 5://replace
+		System.out.println("Enter start index to replace:");
+		int repStart= sc.nextInt();
+		System.out.println("Enter end index to replace:");
+		int repEnd= sc.nextInt();
+		sc.nextLine();
+		System.out.println("Enter replacement text:");
+		String replacement= sc.nextLine();
+		if(repStart>=0 && repEnd<=text.length() && repStart<repEnd) {
+			text.replace(repStart, repEnd, replacement);
+			
+		}else {
+			System.out.println("Invalid indices!");
+		}
+		break;
+	case 6: //Exit
+		System.out.println("Exiting text editor....");
+		sc.close();
+		return;
+		default:
+			System.out.println("Invalid choice! Try again.");
+		
+		
+		
+		
+    
+    
+	}
+	
+}
+	}
+
+}
