@@ -28,31 +28,31 @@ class BinarySearchTree{
 		return root;	
 		}
 	public void preOrder() {
-		System.out.println("Pre-Order:");
+		System.out.print("Pre-Order: ");
 		preOrderRec(root);
 		System.out.println();
 	}
 	private void preOrderRec(BSTNode node) {
 		if(node!=null) {
-			System.out.println(node.info+" ");
+			System.out.print(node.info+ " ");
 			preOrderRec(node.left);
 			preOrderRec(node.right);
 		}
 	}
 	public void inOrder() {
-		System.out.println("In-Order:");
+		System.out.print("In-Order: ");
 		inOrderRec(root);
 		System.out.println();
 	}
 	private void inOrderRec(BSTNode node) {
 		if(node!=null) {
 			inOrderRec(node.left);
-			System.out.println(node.info+" ");
+			System.out.print(node.info+ " ");
 			inOrderRec(node.right);
 		}
 	}
 		public void postOrder() {
-			System.out.println("Post-Order:");
+			System.out.print("Post-Order: ");
 			postOrderRec(root);
 			System.out.println();
 		}
@@ -61,7 +61,7 @@ class BinarySearchTree{
 	if(node!=null) {
 		postOrderRec(node.left);
 		postOrderRec(node.right);
-		System.out.println(node.info+" ");
+		System.out.print(node.info+ " ");
 		
 	}
 		
@@ -87,31 +87,11 @@ for(int val: values) {
 
 
 
+
+
+
+
 output:
-Pre-Order:
-50 
-30 
-20 
-40 
-70 
-60 
-80 
-
-In-Order:
-20 
-30 
-40 
-50 
-60 
-70 
-80 
-
-Post-Order:
-20 
-40 
-30 
-60 
-80 
-70 
-50 
-
+Pre-Order: 50 30 20 40 70 60 80 
+In-Order: 20 30 40 50 60 70 80 
+Post-Order: 20 40 30 60 80 70 50 
