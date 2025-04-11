@@ -64,11 +64,7 @@ class Node{
 		insert(5);
 		insert(12);
 		System.out.println("Root: " +root.data);
-		obj.root =new Node(1);
-		obj.root.left= new Node(2);
-		obj.root.right= new Node(3);
-		obj.root.left.left= new Node(4);
-		obj.root.left.right= new Node(5);
+		
 		System.out.println("In-Order traversal : ");
 		inorder(obj.root);
 		System.out.println();
@@ -92,26 +88,25 @@ class Node{
 	
 
 output:
-
 Root: 15
 In-Order traversal : 
-4 
-2 
 5 
-1 
-3 
+10 
+12 
+15 
+20 
 
 Pre-Order traversal : 
-1 
-2 
-4 
+15 
+10 
 5 
-3 
+12 
+20 
 
 Post-Order traversal : 
-4 
 5 
-2 
-3 
-1 
+12 
+10 
+20 
+15 
 
