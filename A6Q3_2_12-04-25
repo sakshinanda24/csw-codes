@@ -1,0 +1,53 @@
+package csw_2;
+class TreeNode{
+	int val;
+	TreeNode left;
+	TreeNode right;
+	TreeNode(int val){
+		this.val=val;
+	}
+}
+public class A6Q3_2 {
+public static boolean isBinarySearchTree(TreeNode root) {
+	if(root==null)
+		return true;
+	if(root.left!=null && getMax(root.left)>root.val)
+		return false;
+	if(root.right!=null && getMin(root.right)<root.val)
+		return false;
+	if(!isBinarySearchTree(root.left) || !isBinarySearchTree(root.right))return false;
+	return true;
+}
+static int getMax(TreeNode root) {
+	if(root==null)
+		return Integer.MIN_VALUE;
+	return Math.max(root.val,Math.max(getMax(root.left),getMax(root.right)));
+	
+}
+static int getMin(TreeNode root) {
+	if(root==null)
+		return Integer.MAX_VALUE;
+	return Math.min(root.val,Math.min(getMin(root.left),getMin(root.right)));
+	
+}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+TreeNode root= new TreeNode(10);
+root.left=new TreeNode(6);
+root.right=new TreeNode(14);
+root.left.right=new TreeNode(3);
+root.left.right=new TreeNode(7);
+root.right.left=new TreeNode(6);
+if(isBinarySearchTree(root)) {
+	System.out.println("Binary Tree is BST.");
+}else {
+	System.out.println("Binary Tree is not a BST.");
+}
+	}
+
+}
+
+
+OUTPUT:
+Binary Tree is not a BST.
